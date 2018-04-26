@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CourseLibrary from './courseLibrary';
+import Schedule from './schedule';
 
 export default class App extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends Component {
         </div>
         <div className="schedule">
           <h1 className="schedule__header">My Schedule</h1>
+          <Schedule />
         </div>
       </div>
     );
