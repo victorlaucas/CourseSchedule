@@ -56,7 +56,6 @@ class CourseLibrary extends Component {
 
 
 function mapStateToProps(state) {
-    console.log(`state courses are : ${JSON.stringify(state.courses)}`)
     return { courses: state.courses }
 }
 
