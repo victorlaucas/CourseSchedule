@@ -11,9 +11,13 @@
 .library {
     flex-grow: 2;
     width: 62%;
+    max-width: 62%;
     height: 100vh;
     padding: 6rem;
     z-index: 1;
+    position: absolute;
+    left: 0;
+
 }
 
 .schedule {
@@ -23,6 +27,8 @@
     height: 100vh;
     text-align: center;
     padding: 12rem 6rem;
+    position: fixed;
+    right: 0;
 }
 
 
