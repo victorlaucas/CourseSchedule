@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect, dispatch } from 'react-redux';
-import { fetchCourses, addCourse } from '../actions'
+import { fetchCourses, addCourse, removeCourse } from '../actions'
 
 class CourseLibrary extends Component {
 
