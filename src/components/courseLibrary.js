@@ -25,8 +25,8 @@ class CourseLibrary extends Component {
                 </div>
                 
                 <a className={`course__arrow ${course.open ? null : 'course__arrow-close'}`} onClick={() => this.props.toggleDescription(course)}></a>
-                <a className={`course__add action ${course.enrolled ? 'hide-content' : 'show-content'}`} onClick={() => this.props.addCourse(course)}></a>
-                <a className={`course__remove action ${course.enrolled ? 'show-content' : 'hide-content'}`} onClick={() => this.props.removeCourse(course)}></a>
+                <a className={`course__add action ${course.enrolled ? 'course__remove' : 'course__add'}`} onClick={() => course.enrolled ? this.props.remove(course) : this.props.addCourse(course)}></a>
+                {/* <a className={`course__remove action ${course.enrolled ? 'show-content' : 'hide-content'}`} onClick={() => this.props.removeCourse(course)}></a> */}
             </div>
              
         <AnimateHeight
@@ -68,7 +68,7 @@ function mapDispatchToProps(dispatch) {
         addCourse:(course) => {
             dispatch(addCourse(course))
         },
-        removeCourse:(course) => {
+        remove:(course) => {
             dispatch(removeCourse(course))
         },
         toggleDescription:(course) => {
