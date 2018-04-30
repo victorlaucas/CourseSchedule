@@ -21,6 +21,7 @@ class CourseLibrary extends Component {
             <div className="course__info">
                 <div className="course__title-container">
                     <div className="course__title">{course.title}</div>
+                    <div className={`course__check-mark ${course.enrolled ? 'show-content-fade' : 'hide-content-fade'}`}></div>
                 </div>
                 
                 <a className={`course__arrow ${course.open ? null : 'course__arrow-close'}`} onClick={() => this.props.toggleDescription(course)}></a>
