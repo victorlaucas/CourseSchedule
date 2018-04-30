@@ -15,7 +15,6 @@ class Schedule extends Component {
     }
 
     renderCourse(course) {
-        console.log(this.state.enrolled.indexOf(course));
         return (
             <div key={this.state.enrolled.indexOf(course)} className={`slot ${course.enrolled ? 'slot__course' : 'slot__empty'}`}>
                 <div>{course.enrolled ? course.title : 'Empty Slot'}</div>

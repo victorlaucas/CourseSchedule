@@ -14,9 +14,17 @@ export default function(state = [], action) {
                 })
             ]
         case ADD_COURSE:
+            var enrolledCount = 0;
+            
+            state.map((course) => {
+                if(course.enrolled) {
+                    enrolledCount++;
+                }
+            })
+
             return [ 
                 ...state.map((course, index) => {
-                    if(course == action.payload) {
+                    if(course == action.payload && enrolledCount < 5) {
                         course.enrolled = true
                     }
                     return course
