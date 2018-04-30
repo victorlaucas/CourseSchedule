@@ -10,9 +10,29 @@
 
 .library {
     flex-grow: 2;
-    width: 70%;
+    width: 62%;
+    height: 100vh;
     padding: 6rem;
     z-index: 1;
+}
+
+.schedule {
+    flex-grow: 1;
+    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%);
+    width: 38%;
+    height: 100vh;
+    text-align: center;
+    padding: 12rem 6rem;
+}
+
+
+.schedule__header {
+    border: none;
+    border-left: 1px solid white;
+    color:white;
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+    line-height: 27px;
 }
 
 .library__header {
@@ -26,11 +46,7 @@
     line-height: 47px;
 }
 
-.schedule {
-    flex-grow: 1;
-    width: 30%;
-    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%);
-}
+
 
 ul {
     list-style-type: none;
@@ -70,19 +86,7 @@ ul li {
     line-height: 22px;
 }
 
-.slot__course {
-    background-color: white;
-    color: black;
-    border: 1px solid rgba(255,255,255,0.6);
-}
 
-.slot__empty {
-    opacity: 0.75;
-    background-color: transparent;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-style: dashed;
-    color: white;
-}
 
 .show-content {
     display: block;
